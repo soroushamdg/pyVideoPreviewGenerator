@@ -11,7 +11,7 @@ setuptools.setup(
     description="Python based script to generate mini previews of your videos, like tutorials or ...",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/soroushamdg/pyPreviewGenerator",
+    url="https://github.com/soroushamdg/pyVideoPreviewGenerator",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
