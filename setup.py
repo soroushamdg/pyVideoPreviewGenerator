@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyVideoPreviewGenerator", # Replace with your own username
-    version="1.0",
+    version="1.0.1",
     author="@soroushamdg (soroushmpour)",
     author_email="soroushmpour@gmail.com",
     description="Python based script to generate mini previews of your videos, like tutorials or ...",
