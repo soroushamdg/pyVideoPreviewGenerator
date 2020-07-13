@@ -1,3 +1,5 @@
+![header_image](header.jpg)
+
 # pyPreviewGenerator
 **pyPreviewGenerator** is a python module you can use to generate short previews of your videos. Like you have made a short documentry for your school and you want to create a short preview to post on instagram, so you can quickly generate the preview using this script, it's super easy to use, and so much faster than doing it by video editors.
 
@@ -19,7 +21,7 @@ you can checkout modules pip page here.
 5. you're ready to go!
 
 ## Usage
-
+#### 1 - Using module in your python code
 first you need to import the module
 
     from pyPreviewGenerator import pyPreviewGenerator
@@ -37,11 +39,22 @@ pyPreviewGenerator.generate_preview(filePath,
  exportPath = None # define export path - default = 'preview.mp4' next to input video  
   )
   '''
+  
+#### 2 - Using module as CMD or Terminal Application
+
+first install module using pip, then in cmd or Terminal
+
+for help : `python -m pyPreviewGenerator.pyPGCLI --help`
+
+example :
+ 
+ `python -m pyPreviewGenerator.pyPGCLI --filepath="videos\test.mp4" --startrange=65 -e=390 -i=(0,65) -o=(390,410) -m=4 -d=1 -p=-0.5 -x="videos\pre_test.mp4"`
+
 
 ## License
 **@soroushamdg made it.**
 
-License attached to here
+License attached to files(MIT License)
 
 ## Issues
-if you found a bug, catch it then throw it in issues section
+if you found a bug, catch it and throw it in issues section

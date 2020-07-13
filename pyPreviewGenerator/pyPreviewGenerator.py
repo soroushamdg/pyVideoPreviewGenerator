@@ -1,7 +1,6 @@
 import pathlib
 from pyPreviewGenerator import helpers
 
-
 def generate_preview(filePath, startRange, endRange, introRange=None, outroRange= None,miniClipsCount=3, fadeEffectBetweenClips= 1, fadeEffectPadding = -0.5, exportPath = None):
     """
     This function will export generated preview as mp4 next to input path.
@@ -63,3 +62,5 @@ def generate_preview(filePath, startRange, endRange, introRange=None, outroRange
     else:
         print('pyPreviewBaker => Export finished successfully.')
     return True
+
+
