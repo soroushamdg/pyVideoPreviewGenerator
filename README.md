@@ -49,7 +49,7 @@ for help : `python -m pyPreviewGenerator.pyPGCLI --help`
 
 example :
  
- `python -m pyPreviewGenerator.pyPGCLI --filepath="videos\test.mp4" --startrange=65 -e=390 -i=(0,65) -o=(390,410) -m=4 -d=1 -p=-0.5 -x="videos\pre_test.mp4"`
+ `python -m pyPreviewGenerator.pyPGCLI --filepath "videos\test.mp4" --startrange 65 -e 390 -i 0 65 -o 390 410 -m 4 -d 1 -p -0.5 -x "videos\pre_test.mp4"`
 
 
 ## License
