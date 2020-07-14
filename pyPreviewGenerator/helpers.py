@@ -15,7 +15,7 @@ def mini_clips_times(count, start_range, end_range):
     ranges = []
     miniRangesDurations = (end_range - start_range)/count
     for i in range(count):
-        k = random.randrange(start_range + (i*miniRangesDurations),start_range +  (i*miniRangesDurations) +miniRangesDurations )
+        k = random.randrange(int(start_range + (i*miniRangesDurations)),int(start_range + (i*miniRangesDurations) +miniRangesDurations ))
         ranges.append(
             (k,k+5)
         )

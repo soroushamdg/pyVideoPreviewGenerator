@@ -8,10 +8,10 @@ from pyPreviewGenerator.pyPreviewGenerator import generate_preview
               help='Starting range to extract clips of as seconds, exp : 30',type = int)
 @click.option('-e','--endrange',
               help='Ending range to extract clips of as seconds, exp : 680',type = int)
-@click.option('-i','--introrange',default = None,
-              help='Range of intro to clip to first of video as seconds in tuple, exp : (0,30)',type = tuple)
-@click.option('-o','--outrorange',default = None,
-              help='Range of outro to clip to end of video as seconds in tuple, exp : (0,30)',type = tuple)
+@click.option('-i','--introrange',default = None, multiple=True,
+              help='Range of intro to clip to first of video as seconds in tuple, exp : (0,30)',type = (int,int))
+@click.option('-o','--outrorange',default = None, multiple=True,
+              help='Range of outro to clip to end of video as seconds in tuple, exp : (0,30)',type = (int,int))
 @click.option('-m','--miniclipscount',default = 3,
               help='How many scenes you want to split clip into',type = int)
 @click.option('-d','--fadeeffectduration',default = 1,
@@ -20,22 +20,22 @@ from pyPreviewGenerator.pyPreviewGenerator import generate_preview
               help='Fade effect between clips padding as second',type = float)
 @click.option('-x','--exportpath',default = None,
               help='Full path to your output video file, including format suffix, if None, it will save next to input file',type = str)
-def pg_cli(filePath,
+def pg_cli(filepath,
            startrange,
            endrange,
            introrange,
            outrorange,
            miniclipscount,
-           fadeeffectbetweenclips,
+           fadeeffectduration,
            fadeeffectpadding,
            exportpath):
-    generate_preview(filePath=filePath,
-                     startRange=startrange,
-                     endRange=endrange,
-                     introRange=introrange,
-                     outroRange=outrorange,
+    generate_preview(filePath=filepath,
+                     startRange=int(startrange),
+                     endRange=int(endrange),
+                     introRange=introrange[0],
+                     outroRange=outrorange[0] if outrorange else None,
                      miniClipsCount=miniclipscount,
-                     fadeEffectBetweenClips=fadeeffectbetweenclips,
+                     fadeEffectBetweenClips=fadeeffectduration,
                      fadeEffectPadding=fadeeffectpadding,
                      exportPath=exportpath
                      )
