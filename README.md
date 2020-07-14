@@ -9,7 +9,7 @@
 you can both clone this repository or install it using pip, both instructions are below;
 - installing using **pip**
 
-    `pip install pyPreviewGenerator`
+    `pip install pyVideoPreviewGenerator`
 
 you can checkout modules pip page here.
 
