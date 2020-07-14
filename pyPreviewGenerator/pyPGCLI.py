@@ -2,11 +2,11 @@ import click
 from pyPreviewGenerator.pyPreviewGenerator import generate_preview
 
 @click.command()
-@click.option('-f','--filepath',
+@click.option('-f','--filepath',required= True,
               help='Full path to your input video file',type = str)
-@click.option('-s','--startrange',
+@click.option('-s','--startrange', required = True,
               help='Starting range to extract clips of as seconds, exp : 30',type = int)
-@click.option('-e','--endrange',
+@click.option('-e','--endrange', required = True,
               help='Ending range to extract clips of as seconds, exp : 680',type = int)
 @click.option('-i','--introrange',default = None, multiple=True,
               help='Range of intro to clip to first of video as seconds in tuple, exp : (0,30)',type = (int,int))
